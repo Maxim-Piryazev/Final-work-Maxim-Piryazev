@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Russo+One&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #242833;
+  color: #ffffff;
+  user-select: none;
+  font-family: "Russo One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.titel {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 90px;
+}
+.scren {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  width: 350px;
+  height: 680px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+}
+.mobile_botton {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  gap: 65px;
+  margin-top: auto;
+  padding: 19px;
+}
+.link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn {
+  float: right;
+  border: 0;
+  padding: 0 20px;
+  font-size: 0.6rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: #269699;
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow: inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+.btn-cleaner {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #269699;
+color: white;
+border: none;
+}
+
+.btn:hover {
+  background-color: rgb(6, 247, 255);
+}
+
+.btn:active {
+  box-shadow: inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+.block {
+  border: 1px solid grey;
+  border-radius: 7px;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-left: -25px;
+  margin-right: 10px;
+}
+li {
+  list-style-type: none;
+}
+
+
+

@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Russo+One&display=swap");
+
+
+body {
+  background-color: #242833;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  user-select: none;
+  font-family: "Russo One", serif;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.mobile {
+  width: 350px;
+  height: 680px;
+  background-color: #242833;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+  display: grid;
+  grid-template-rows: 48px 1fr 42px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.mobile_botton {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  gap: 65px;
+  margin-top:10px ;
+}
+
+/* Выпадающий список */
+.selectbox {
+  cursor: pointer;
+  width: 143px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 25px;
+}
+.selectbox_selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+.selectbox.open .selectbox_list {
+  top: 120%;
+  max-height: 200px;
+}
+.selectbox_list {
+  color: white;
+  position: absolute;
+  padding: 4px 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 7px;
+  /* background-color: rgb(36, 40, 51);  */
+  box-shadow: inset 0 0 0 3000px rgba(36, 40, 51, 0.192);
+  filter: blur(0.1px);
+  /* сделать эффект матового стекла */
+
+}
+.selectbox_item :not(:last-child) {
+  margin-bottom: 4px;
+}
+.selectbox_item {
+  cursor: pointer;
+}
+.selectbox_item.selected,
+.selectbox_item:hover{
+  color:#269699;
+  font-weight: 600;
+}
+
+.room {
+  display: grid;
+  grid-template-rows: 130px 30px;
+  color: white;
+  text-align: center;
+  justify-items: center;
+  background-color: #4b505d;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.room.selected{
+  background: #269699;
+}
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+ 
+}
+svg {
+  align-self: center;
+  fill: white;
+}
+
+
+
+.selectbox.open .arrow{
+  transform: rotate(-180deg);
+
+}
+
+.arrow{
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+transform: rotate(0deg);
+}
+
+
+
+
+
+
+.tab {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  color: white;
+  text-align: center;
+  justify-items: center;
+  background-color: #4b505d;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.tab.selected{
+  background: #269699;
+}
+
+
+
+
+
+.settings_tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px;
+  gap: 14px;
+}
+.settings {
+  display: none;
+  padding: 0 20px;
+}
+svg {
+  align-self: center;
+  fill: white;
+}
+.set-button:hover,
+.power:hover {
+  background-color: #269699;
+}
+
+/* температура */
+
+.temperature-button {
+  cursor: pointer;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+}
+.temperature-button_info {
+  position: relative;
+  font-size: 32px;
+  color: white;
+  font-weight: 600;
+  width: 70%;
+  height: 70%;
+  border-radius: 70%;
+  background-color: #242833;
+  box-shadow: 0 0 5px rgba(181, 178, 178, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.temperature-button_info::before {
+  content: "";
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 4%;
+  bottom: 4%;
+  border-radius: 100%;
+  border: 1px solid black;
+  opacity: 0.3;
+}
+.dots-box {
+  transform: rotate(5deg);
+  transform-origin: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.dots,
+.line,
+.line-active,
+.round,
+.separate-line,
+.separate-dots {
+  fill: transparent;
+  stroke: grey;
+  stroke-width: 3px;
+  stroke-dasharray: 0 21;
+  stroke-linecap: round;
+  /* transition: all 0.5s ease-in-out; */
+}
+.settings_screen-title {
+  text-align: center;
+  margin: 30px 0 15px;
+  color: white;
+  font-weight: 300;
+}
+.line,
+.line-active,
+.round {
+  stroke-dasharray: 276 276;
+  stroke-width: 1px;
+  transform: rotate(48deg);
+  transform-origin: center;
+}
+.line-active {
+  stroke: #269699;
+  stroke-dasharray: 54 276;
+  transition: all 0.5 ease-in-out;
+}
+.round {
+  stroke-dasharray: 0 276;
+  stroke-width: 6px;
+  transform: rotate(-240deg);
+}
+.separate-line,
+.separate-dots {
+  stroke: white;
+  transform: rotate(60deg);
+  transform-origin: center;
+}
+.separate-dots {
+  stroke-dasharray: 40 313;
+}
+.separate-line {
+  stroke-dasharray: 53 276;
+  transform: rotate(49deg);
+}
+.power {
+  background: #269699;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  font-size: 24px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.power.off{
+  background: gray;
+}
+/* Слайдер */
+.slider {
+  cursor: pointer;
+  width: 100px;
+  height: 250px;
+  margin: 0 auto;
+  background: #4b505d;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.slider_progress {
+  background: #269699;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  /* transition: all 0.5s ease-in-out; */
+  min-height: 30px;
+  height: 45%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.power-label {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: white;
+  font-weight: 300;
+}
+.save-button {
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  background: #269699;
+  width: 250px;
+  margin: 15px auto 0;
+  border-radius: 100px;
+  padding: 16px;
+}
+/* Экран настроек */
+.settings_screen {
+  display: none;
+}
+.settings_screen.selected {
+  display: block;
+}
+.settings_screen-icon {
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* Выключатель */
+.switch {
+  width: 60px;
+  height: 28px;
+  background: #4b505d;
+  margin: 30px auto 0;
+  border-radius: 60px;
+  position: relative;
+  cursor: pointer;
+}
+.switch.off div{
+left: 0;
+background: grey;
+}
+
+
+
+
+.switch div {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 52%;
+  top: 0;
+  border-radius: 28px;
+  background: #269699;
+  transition: all 0.3s;
+}

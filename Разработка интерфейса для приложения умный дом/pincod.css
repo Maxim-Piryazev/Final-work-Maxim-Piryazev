@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Russo+One&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #242833;
+  font-family: "Anta", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+#input_fields {
+  background: #242833;
+  width: 350px;
+  height: 680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+  margin: auto;
+  color: white;
+}
+
+.input {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.input_line {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  width: 15px;
+  height: 15px;
+  transform: scale3d(0.7, 0.7, 0.7);
+}
+.input_line.active {
+  animation: inputPassword 0.5s ease;
+  animation-fill-mode: forwards;
+}
+.input_line.notСorrect {
+  animation: notСorrect 0.9s ease;
+}
+.input_line.correct {
+  animation: correct 0.9s ease;
+}
+
+
+.buttons {
+ 
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  align-content: flex-end;
+  margin: 10px 0;
+}
+
+.btn {
+  cursor: pointer;
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0.5em;
+  border-radius: 2.5em;
+  border: 2px solid rgba(255, 255, 255, 0);
+  text-align: center;
+  line-height: 2.5em;
+  font-weight: 400;
+  font-size: 1.8em;
+  user-select: none;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.btn:hover:before {
+  border: 2px solid rgba(15, 39, 174, 0.5);
+ 
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  width: 2.5em;
+  height: 2.5em;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 2.5em;
+  transition: all 0.5s ease;
+}
+.linkRegis{
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Russo One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes inputPassword {
+  100% {
+    background: #ffffff;
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+
+@keyframes notСorrect {
+  20% {
+    background: #dc143c;
+  }
+  40% {
+    transform: translate(-15px, 0);
+  }
+  60% {
+    transform: translate(10px, 0);
+  }
+  80% {
+    transform: translate(-5px, 0);
+  }
+}
+
+@keyframes correct {
+  20% {
+    background: #32cd32;
+  }
+  40% {
+    transform: translate(0, -15px);
+  }
+  60% {
+    transform: translate(0, 10px);
+  }
+  80% {
+    transform: translate(0, -5px);
+  }
+}
+

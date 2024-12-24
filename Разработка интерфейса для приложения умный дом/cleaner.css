@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Russo+One&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #242833;
+  color: #ffffff;
+  user-select: none;
+  font-family: "Russo One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.titel {
+  margin-top: 30px;
+  text-align: center;
+  
+  
+}
+.scren {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  width: 350px;
+  height: 680px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+}
+.mobile_botton {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  gap: 65px;
+  margin-top: auto;
+  padding: 19px;
+}
+.link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn-cleaner {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #9da6a7;
+  color: white;
+  border: none;
+  font-family: "Russo One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.btn-cleaner:focus{
+  background-color: #269699;
+}
+
+/* Визуализация пылесоса */
+
+.big-circle {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.middle-circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.small-circle {
+  width: 5px;
+  height: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.svg-path {
+  stroke: #269699;
+  stroke-width: 4;
+  fill: none;
+}
+
+.cleaner-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+}
+
+.svg-path {
+  position: absolute;
+}
+.animation{
+  
+  animation: clean 19s alternate linear infinite;
+}
+.big-circle {
+  offset-path: path(
+    "M 50 200 L 50 50 L 100 50 L 100 200 L 150 200 L 150 50 L 200 50 L 200 200 L 250 200 L 250 50 L 300 50 L 300 200  "
+  );
+ 
+}
+
+@keyframes clean {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+
+.percent{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 2px solid gray;
+  width: 100px;
+  height: 30px;
+}
+.charge{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.battery{
+padding-top: 30px;
+}
+
+
+.paused{
+  animation-play-state: paused;
+}
+
+.error{
+  text-align: center;
+  color: red;
+  animation: err  1.0s infinite ease-in-out;
+
+}
+
+
+@keyframes err {
+  50% { opacity: 0; }
+
+}
+.link:active{
+  color: #269699;
+}
